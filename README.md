@@ -4,14 +4,14 @@
 [![Test Coverage](https://api.codeclimate.com/v1/badges/bd00aed89b99e06f01fb/test_coverage)](https://codeclimate.com/github/Codibre/nodejs-tree-key-cache-protobuf/test_coverage)
 [![Maintainability](https://api.codeclimate.com/v1/badges/bd00aed89b99e06f01fb/maintainability)](https://codeclimate.com/github/Codibre/nodejs-tree-key-cache-protobuf/maintainability)
 [![Packages](https://david-dm.org/Codibre/nodejs-tree-key-cache-protobuf.svg)](https://david-dm.org/Codibre/nodejs-tree-key-cache-protobuf)
-[![npm version](https://badge.fury.io/js/%40tree-key-cache%2Ftree-key-cache.svg)](https://badge.fury.io/js/%40tree-key-cache%2Ftree-key-cache)
+[![npm version](https://badge.fury.io/js/%40tree-key-cache%2Fprotobuf.svg)](https://badge.fury.io/js/%40tree-key-cache%2Fprotobuf)
 
 Protobuf tree serializer fot tree-key-cache
 
 ## How to Install
 
 ```
-npm i nodejs-tree-key-cache-protobuf
+npm i @tree-key-cache/protobuf
 ```
 
 
