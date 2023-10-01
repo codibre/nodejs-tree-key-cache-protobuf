@@ -1,18 +1,49 @@
-[![Actions Status](https://github.com/Codibre/boilerplate-base/workflows/build/badge.svg)](https://github.com/Codibre/boilerplate-base/actions)
-[![Actions Status](https://github.com/Codibre/boilerplate-base/workflows/test/badge.svg)](https://github.com/Codibre/boilerplate-base/actions)
-[![Actions Status](https://github.com/Codibre/boilerplate-base/workflows/lint/badge.svg)](https://github.com/Codibre/boilerplate-base/actions)
-[![Test Coverage](https://api.codeclimate.com/v1/badges/65e41e3018643f28168e/test_coverage)](https://codeclimate.com/github/Codibre/boilerplate-base/test_coverage)
-[![Maintainability](https://api.codeclimate.com/v1/badges/65e41e3018643f28168e/maintainability)](https://codeclimate.com/github/Codibre/boilerplate-base/maintainability)
-[![Packages](https://david-dm.org/Codibre/boilerplate-base.svg)](https://david-dm.org/Codibre/boilerplate-base)
-[![npm version](https://badge.fury.io/js/%40codibre%2Fboilerplate-base.svg)](https://badge.fury.io/js/%40codibre%2Fboilerplate-base)
+[![Actions Status](https://github.com/Codibre/nodejs-tree-key-cache-protobuf/workflows/build/badge.svg)](https://github.com/Codibre/nodejs-tree-key-cache-protobuf/actions)
+[![Actions Status](https://github.com/Codibre/nodejs-tree-key-cache-protobuf/workflows/test/badge.svg)](https://github.com/Codibre/nodejs-tree-key-cache-protobuf/actions)
+[![Actions Status](https://github.com/Codibre/nodejs-tree-key-cache-protobuf/workflows/lint/badge.svg)](https://github.com/Codibre/nodejs-tree-key-cache-protobuf/actions)
+[![Test Coverage](https://api.codeclimate.com/v1/badges/bd00aed89b99e06f01fb/test_coverage)](https://codeclimate.com/github/Codibre/nodejs-tree-key-cache-protobuf/test_coverage)
+[![Maintainability](https://api.codeclimate.com/v1/badges/bd00aed89b99e06f01fb/maintainability)](https://codeclimate.com/github/Codibre/nodejs-tree-key-cache-protobuf/maintainability)
+[![Packages](https://david-dm.org/Codibre/nodejs-tree-key-cache-protobuf.svg)](https://david-dm.org/Codibre/nodejs-tree-key-cache-protobuf)
+[![npm version](https://badge.fury.io/js/%40tree-key-cache%2Ftree-key-cache.svg)](https://badge.fury.io/js/%40tree-key-cache%2Ftree-key-cache)
 
-Never forget to write your readme! Also, don't forget to add codeclimate key to your github environment variables (as **CC_TEST_REPORTER_ID**) and to update the url here with the one provided by them!
+Protobuf tree serializer fot tree-key-cache
 
 ## How to Install
 
 ```
-npm i boilerplate-base
+npm i nodejs-tree-key-cache-protobuf
 ```
+
+
+## How to use it
+
+First, declare the proto file for the object you want to be the cache value:
+
+```proto
+syntax = "proto3";
+package codibre.test_value;
+
+message Value {
+  int32 value = 1;
+}
+```
+
+Then, instantiate TreeKeyCache passing the proto path to **getProtobufjsSerializers** with the full lookup type path:
+
+```ts
+const protoPath = join(process.cwd(), 'proto/value.proto');
+const lookupType = 'codibre.test_value.Value';
+
+target = new TreeKeyCache<{ value: number }, Uint8Array>(
+			map,
+			{
+				keyLevelNodes: 4,
+				...(await getProtobufjsSerializers(protoPath, lookupType)),
+			},
+		);
+```
+
+And that's it! You now have a TreeKeyCache instance that serializes and deserializes using protobuf, which will save you a lot of space!
 
 ## License
 

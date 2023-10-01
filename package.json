@@ -1,8 +1,8 @@
 {
-  "name": "boilerplate-base",
+  "name": "@tree-key-cache/protobuf",
   "description": "This project is just a template for creation of new projects",
   "version": "0.0.0",
-  "private": true,
+  "private": false,
   "author": {
     "name": "Thiago O Santos <tos.oliveira@gmail.com>"
   },
@@ -55,18 +55,22 @@
     "testEnvironment": "node",
     "setupFilesAfterEnv": [
       "./test/jest-setup.ts"
-    ]
+    ],
+    "moduleNameMapper": {
+      "^src/(.*)": "<rootDir>/src/$1",
+      "^test/(.*)": "<rootDir>/test/$1"
+    }
   },
   "directories": {
     "test": "test"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/codibre/boilerplate-base.git"
+    "url": "https://github.com/codibre/nodejs-tree-key-cache-protobuf.git"
   },
-  "homepage": "https://github.com/codibre/boilerplate-base#readme",
+  "homepage": "https://github.com/codibre/nodejs-tree-key-cache-protobuf#readme",
   "bugs": {
-    "url": "https://github.com/codibre/boilerplate-base/issues"
+    "url": "https://github.com/codibre/nodejs-tree-key-cache-protobuf/issues"
   },
   "keywords": [],
   "license": "MIT",
@@ -87,11 +91,17 @@
     "jest-callslike": "^0.2.1",
     "jest-extended": "^2.0.0",
     "prettier": "^2.5.1",
+    "protobufjs": "^7.2.5",
+    "tree-key-cache": "^0.7.1",
     "ts-jest": "^29.1.0",
     "ts-loader": "^9.2.7",
     "ts-node": "^10.6.0",
     "typedoc": "^0.22.17",
     "typedoc-plugin-markdown": "^3.12.1",
     "typescript": "^4.5.2"
+  },
+  "peerDependencies": {
+    "protobufjs": "*",
+    "tree-key-cache": ">=0.7.1"
   }
 }

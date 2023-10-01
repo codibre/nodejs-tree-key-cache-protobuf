@@ -1,0 +1,7 @@
+syntax = "proto3";
+package codibre.tree_cache;
+
+message Tree {
+  optional bytes v = 1;
+  map<string, Tree> c = 2;
+}
