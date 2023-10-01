@@ -1,6 +1,6 @@
 {
   "name": "@tree-key-cache/protobuf",
-  "description": "This project is just a template for creation of new projects",
+  "description": "Protobuf tree serializer fot tree-key-cache",
   "version": "0.1.0",
   "private": false,
   "author": {
