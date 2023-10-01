@@ -33,6 +33,7 @@ describe('proto', () => {
 		const decoded = type.toObject(type.decode(encoded));
 
 		expect(tree).toEqual(decoded);
-		expect(encoded.length).toBeLessThan(JSON.stringify(tree).length);
+		const originalLength = JSON.stringify(tree).length;
+		expect(encoded.length).toBeLessThan(originalLength);
 	});
 });
