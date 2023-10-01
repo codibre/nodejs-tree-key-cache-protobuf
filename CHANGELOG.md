@@ -1,3 +1,10 @@
+## [0.1.1](https://github.com/codibre/nodejs-tree-key-cache-protobuf/compare/v0.1.0...v0.1.1) (2023-10-01)
+
+
+### Bug Fixes
+
+* fixing description ([#1](https://github.com/codibre/nodejs-tree-key-cache-protobuf/issues/1)) ([2de24d8](https://github.com/codibre/nodejs-tree-key-cache-protobuf/commit/2de24d8c1391fe7dc7c907f22d805046112a297c))
+
 # [0.1.0](https://github.com/codibre/nodejs-tree-key-cache-protobuf/compare/v0.0.0...v0.1.0) (2023-10-01)
 
 
