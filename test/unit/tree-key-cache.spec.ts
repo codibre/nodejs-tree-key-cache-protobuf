@@ -1,10 +1,12 @@
-import { getProtobufjsSerializers } from 'src/get-serializers';
+import {
+	getProtobufjsSerializers,
+	loadProtoType,
+	ProtobufjsValueSerializer,
+	ProtobufjsTreeSerializer,
+} from '../../src';
 import { Step, Tree, TreeKeyCache, TreeKeys } from 'tree-key-cache';
 import { promisify } from 'util';
 import { join } from 'path';
-import { loadProtoType } from 'src/load-proto-type';
-import { ProtobufjsValueSerializer } from 'src/value-serializer';
-import { ProtobufjsTreeSerializer } from 'src/tree-serializer';
 
 const delay = promisify(setTimeout);
 
