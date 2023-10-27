@@ -1,3 +1,10 @@
+## [0.1.3](https://github.com/codibre/nodejs-tree-key-cache-protobuf/compare/v0.1.2...v0.1.3) (2023-10-27)
+
+
+### Bug Fixes
+
+* exposing methods and classes of the lib ([#2](https://github.com/codibre/nodejs-tree-key-cache-protobuf/issues/2)) ([df8b630](https://github.com/codibre/nodejs-tree-key-cache-protobuf/commit/df8b630c5eab472325c6688e4887237d658c2c9e))
+
 ## [0.1.2](https://github.com/codibre/nodejs-tree-key-cache-protobuf/compare/v0.1.1...v0.1.2) (2023-10-01)
 
 
